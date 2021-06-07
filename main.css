@@ -6,13 +6,37 @@
     color: white;
 }
 
+#contrast-overlay {
+    position: fixed;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.405);
+}
+
 header {
     height: 100vh;
     width: 100%;
     background-color: rgb(9, 9, 9);
-    background-image: url("images/rave.jpg");
+    background-image: url("images/LANDING-PAGE.gif");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ne_logo_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    pointer-events: none;
+}
+
+#ne_logo {
+    position: absolute;
+    height: 6vh;
+    margin: 1rem 0;
 }
 
 #nav_layer {
