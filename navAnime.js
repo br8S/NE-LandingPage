@@ -1,6 +1,6 @@
 document.querySelector("#nav_button").addEventListener("click", function() {
     gsap.to("#nav_layer", {
-        duration: 0.75,
+        duration: 0.5,
         y: 0
     })
 
@@ -8,12 +8,35 @@ document.querySelector("#nav_button").addEventListener("click", function() {
         opacity: 0,
         delay: 0.5
     })
+
+    gsap.to("#nav_ne_logo", {
+        opacity: 1, 
+        duration: 1,
+        delay: 0.5
+    })
+
+    gsap.to(".nav-links", {
+        opacity: 1, 
+        delay: 0.7
+    })
 })
 
 document.querySelector("#exit_button").addEventListener("click", function() {
     gsap.to("#nav_layer", {
-        duration: 0.75,
-        y: -1600
+        duration: 0.5,
+        y: -1600,
+        delay: 0.5
+    })
+
+    gsap.to("#nav_ne_logo", {
+        opacity: 0, 
+        duration: 1,
+        delay: 0.2
+    })
+
+    gsap.to(".nav-links", {
+        opacity: 0, 
+        delay: 0.2
     })
 })
 
