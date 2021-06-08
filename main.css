@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 }
 
 #contrast-overlay {
-    position: fixed;
+    position: absolute;
     z-index: 0;
     height: 100vh;
     width: 100%;
@@ -39,27 +41,39 @@ header {
     margin: 1rem 0;
 }
 
-#nav_layer {
-    height: 100vh;
-    width: 40rem;
-    background-color: rgb(9, 9, 9);
-    transform: translate(-40rem, 0);
+#nav_ne_logo {
+    position: absolute;
+    height: 30vh;
+    left: 0.5rem;
+    pointer-events: none;
 }
+
+#nav_layer {
+    position: relative;
+    height: 100vh;
+    width: 32rem;
+    background-color: rgb(9, 9, 9);
+    transform: translate(0, -100rem);
+}
+
 #nav {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 1rem;
+    top: 15vh;
 }
 
 .nav-links {
+    font-size: 1.25rem;
     padding: 1rem;
 }
 
 #nav_button {
     position: absolute;
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
     top: 0;
     left: 0;
     background-image: url("images/burger.png");
@@ -73,8 +87,8 @@ header {
 
 #exit_button {
     position: absolute;
-    height:1.5rem;
-    width: 1.5rem;
+    height:1rem;
+    width: 1rem;
     top: 0;
     right: 0;
     background-image: url("images/cross.svg");
@@ -84,5 +98,51 @@ header {
 }
 
 #exit_button:hover {
+    cursor: pointer;
+}
+
+#crew_section {
+    position: relative;
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+}
+
+.crew-member-container {
+    padding: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crew-member-container-2 {
+    position: absolute;
+    top: 0;
+    padding: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crew-member {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 8rem;
+    padding: 0.5rem;
+    opacity: 5%;
+}
+
+.crew-member:hover {
+    cursor: pointer;
+}
+
+.crew-member-2 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4rem;
+}
+
+.crew-member-2:hover {
     cursor: pointer;
 }

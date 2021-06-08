@@ -1,7 +1,7 @@
 document.querySelector("#nav_button").addEventListener("click", function() {
     gsap.to("#nav_layer", {
-        duration: 1,
-        x: 0,
+        duration: 0.75,
+        y: 0
     })
 
     gsap.from("#exit_button", {
@@ -12,8 +12,8 @@ document.querySelector("#nav_button").addEventListener("click", function() {
 
 document.querySelector("#exit_button").addEventListener("click", function() {
     gsap.to("#nav_layer", {
-        duration: 1,
-        x: -640,
+        duration: 0.75,
+        y: -1600
     })
 })
 
