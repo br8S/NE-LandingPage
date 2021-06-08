@@ -8,18 +8,21 @@
     color: white;
 }
 
+body{
+    background-color: rgb(9, 9, 9);
+}
+
 #contrast-overlay {
     position: absolute;
     z-index: 0;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.405);
+    background-color: rgba(0, 0, 0, 0.213);
 }
 
 header {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    background-color: rgb(9, 9, 9);
     background-image: url("images/LANDING-PAGE.gif");
     background-position: center;
     background-size: cover;
@@ -36,9 +39,10 @@ header {
 }
 
 #ne_logo {
-    position: absolute;
+    position: fixed;
+    z-index: 5;
     height: 6vh;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 #nav_ne_logo {
@@ -51,10 +55,11 @@ header {
 
 #nav_layer {
     position: fixed;
-    height: 100vh;
+    z-index: 5;
+    height: 90vh;
     width: 32rem;
-    transform: translate(0, -100rem);
     background-color: rgb(9, 9, 9);
+    transform: translate(0, -100rem);
 }
 
 #nav {
@@ -74,13 +79,14 @@ header {
 
 #nav_button {
     position: fixed;
-    height: 1.5rem;
-    width: 1.5rem;
+    z-index: 5;
+    height: 1.4rem;
+    width: 1.4rem;
     top: 0;
     left: 0;
     background-image: url("images/burger.png");
     background-size: contain;
-    margin: 1rem;
+    margin: 1.5rem 2rem;
 }
 
 #nav_button:hover {
@@ -103,6 +109,16 @@ header {
     cursor: pointer;
 }
 
+/* UPCOMING SECTION */
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 3.5rem 2rem;
+}
+
+/* CREW SECTION */
+
 #crew_section {
     position: relative;
     width: 100%;
@@ -120,7 +136,7 @@ header {
 .crew-member-container-2 {
     position: absolute;
     top: 0;
-    padding: 10rem;
+    padding: 15.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
