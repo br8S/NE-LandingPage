@@ -24,7 +24,7 @@ body{
 }
 
 #load_logo {
-    height: 15vh;
+    height: 12vh;
 }
 
 #contrast-overlay {
@@ -87,7 +87,7 @@ header {
 }
 
 .nav-links {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding: 1rem;
     opacity: 0;
 }

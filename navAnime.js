@@ -25,7 +25,7 @@ document.querySelector("#exit_button").addEventListener("click", function() {
     gsap.to("#nav_layer", {
         duration: 0.5,
         y: -1600,
-        delay: 0.5
+        delay: 0.3
     })
 
     gsap.to("#nav_ne_logo", {
@@ -53,3 +53,4 @@ document.querySelector("#exit_button").addEventListener("mouseleave", function()
         opacity: 0.2,
     })
 })
+
