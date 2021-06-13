@@ -132,6 +132,40 @@ header {
     margin: 3.5rem 2rem;
 }
 
+.upcoming-events-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.upcoming-event {
+    width: 25%;
+    margin: 0.5rem;
+}
+
+.event-img {
+    width: 100%;
+}
+
+/* MIXES SECTION */
+
+.new-mixes-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.new-mixes {
+    width: 25%;
+    margin: 0.5rem;
+}
+
+.mix-img {
+    width: 100%;
+}
+
 /* CREW SECTION */
 
 #crew_section {
