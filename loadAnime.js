@@ -8,6 +8,4 @@ window.addEventListener('load', function() {
        rotation: 360,
        duration: 1
    })
-
-
 })

@@ -1,4 +1,9 @@
 document.querySelector("#nav_button").addEventListener("click", function() {
+    gsap.to("#nav_backdrop", {
+        opacity: 1,
+        duration: 0.3
+    })
+
     gsap.to("#nav_layer", {
         duration: 0.5,
         y: 0
@@ -22,6 +27,12 @@ document.querySelector("#nav_button").addEventListener("click", function() {
 })
 
 document.querySelector("#exit_button").addEventListener("click", function() {
+
+    gsap.to("#nav_backdrop", {
+        opacity: 0,
+        duration: 0.3
+    })
+
     gsap.to("#nav_layer", {
         duration: 0.5,
         y: -1600,

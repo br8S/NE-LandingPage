@@ -27,7 +27,78 @@ body{
     height: 12vh;
 }
 
-#contrast-overlay {
+label{
+    margin: 1rem;
+    position: fixed;
+    display: flex;
+     flex-direction:column;
+     width:40px;
+     cursor:pointer;
+   }
+   
+   label span{
+     background: #fff;
+     height: 4px;
+     margin: 4px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   input[type="checkbox"]{
+     display:none;
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(4px,0px)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(15px,-11px) rotatez(45deg);
+   
+   }
+
+#nav_backdrop {
+    opacity: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.686);
+    pointer-events: none;
+}
+
+#contrast_overlay {
     position: absolute;
     z-index: 0;
     height: 90vh;
@@ -55,15 +126,16 @@ header {
 
 #ne_logo {
     position: fixed;
-    z-index: 5;
+    z-index: 4;
     height: 6vh;
     margin: 0.5rem 0;
 }
 
 #nav_ne_logo {
     position: absolute;
-    height: 30vh;
-    left: 0.5rem;
+    height: 25vh;
+    left: 1.5rem;
+    top: 1rem;
     pointer-events: none;
     opacity: 0;
 }
@@ -71,7 +143,7 @@ header {
 #nav_layer {
     position: fixed;
     z-index: 5;
-    height: 90vh;
+    height: 100vh;
     width: 32rem;
     background-color: rgb(5, 5, 5);
     transform: translate(0, -100rem);
