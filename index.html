@@ -4,138 +4,792 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Expectations</title>
+    <title>NO EXPECTATIONS</title>
     <link rel="icon" href="images/NE-LOGO-T.png">
     <link rel="stylesheet" href="main.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide-core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="grained.min.js"></script>
 </head>
 <body>
     <div id="load_animation">
         <img id="load_logo" src="images/NE-LOGO-T.png">
     </div>
-    <div id="nav_backdrop"></div>
-    <div id="contrast_overlay"></div>
-    <header>
-        <div id="nav_button"></div>
-        <div id="ne_logo_container">
-            <img id="ne_logo" src="images/NE-LOGO-T.png">
-        </div>
-        <nav id="nav_layer">
-            <div id="nav_layer_top"></div>
-            <div id="nav_layer_mid"></div>
-            <div id="nav_layer_bot"></div>
-            
-            <div id="exit_button"></div>
-            <img id="nav_ne_logo" src="images/NE-LOGO-WORDS.png">
-            <div id="nav">
-                <div class="nav-links">ABOUT</div>
-                <div class="nav-links">EVENTS</div>
-                <div class="nav-links">CREW</div>
-                <div class="nav-links">SOCIALS</div>
-            </div>
-        </nav>
-    </header>
+    <div class="grid-overlay-container" id="grid_overlay_container" style="pointer-events: none; position: fixed !important; top: 0; z-index: 10000; height: 100vh; width: 100%; opacity: 0.03;">
+        <div class="v-line1" style="position: absolute; left: 60%; height: 100%; width: 1px; background-color: #fff;"></div>
+        <div class="v-line2" style="position: absolute; left: 20%; height: 100%; width: 1px; background-color: #fff;"></div>
+        <div class="h-line1" style="position: absolute; top: 60%; width: 100%; height: 1px; background-color: #fff;"></div>
+        <div class="h-line2" style="position: absolute; top: 20%; width: 100%; height: 1px; background-color: #fff;"></div>
+    </div>
 
-    <section id="event_section">
+    <div class="header-nav__container" style="background-color: #000; justify-content: space-between; border-bottom: 1px solid #333;">
+        <div style="display: flex; height: 100%;">
+            <img src="images/NE-LOGO-T.png">
+            <div class="header-nav__nav-links">
+                <a class="header-nav__nav-link" href="#upcoming_section"> UPCOMING </a>
+                <a class="header-nav__nav-link" href="#mixes_section"> MIXES </a>
+                <a class="header-nav__nav-link"> PHOTOS </a>
+                <a class="header-nav__nav-link" href="#crew_section"> CREW </a>
+                <a class="header-nav__nav-link"> ABOUT </a>
+            </div>
+            <div class="header-nav__promo" style="word-spacing: 2px;">TEXT "NO EXPECTATIONS" TO 33777 FOR ALL INFO</div>
+        </div>
+        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html" class="header-nav__buy">BUY NE005</a>
+    </div>
+
+    <div class="header-nav__mb-container">
+        <div class="burger">
+            <div class="strip burger-strip-2">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <img src="images/NE-LOGO-T.png">
+        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html" class="header-nav__buy">BUY NE005</a>
+    </div>
+
+    <div class="hero-banner">
+        <div class="hero-banner__content-block">
+            <h1>005 NO EXPECTATIONS X NULLSECT</h1>
+            <p> The 00X series makes its return and you already know how we do it.
+                Join us for our first ever warehouse gathering featuring a takeover by none other than NULLSECT. </p>    
+
+            <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html">MORE INFO</a>
+        </div>
+    </div>
+
+    <!--     UPCOMING SECTION     -->
+
+    <div class="section-upcoming__container" id="upcoming_section">
         <div class="section-title">UPCOMING</div>
-        <div class="all-upcoming-events-container">
-            <div class="upcoming-events-button-container">
-                <div class="left-button event-left-button">
-                    <img class="left-caret" src="images/down-arrow.svg">
-                </div>
-                <div class="right-button event-right-button">
-                    <img class="right-caret" src="images/down-arrow.svg">
-                </div>
-            </div>
-            <div class="upcoming-events-container">
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-1.webp">
-                </div>
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-2.webp">
-                </div>
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-3.webp">
-                </div>
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-4.webp">
-                </div>
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-5.webp">
-                </div>
-                <div class="upcoming-event">
-                    <img class="event-img" src="images/events-6.webp">
+        <div class="splide splide__upcoming">
+            <div class="splide__track splide__track__upcoming">
+                <div class="splide__list splide__list__upcoming">
+                    <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/005-event.jpg">
+                        <a href="" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/004-event.jpg">
+                        <a href="" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/witching.jpg">
+                        <a href="" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/13th.jpg">
+                        <a href="" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="mixes_section">
-        <div class="section-title">NEW MIXES</div>
-        <div class="all-upcoming-mixes-container">
-            <div class="upcoming-mixes-button-container">
-                <div class="left-button mix-left-button">
-                    <img class="left-caret" src="images/down-arrow.svg">
-                </div>
-                <div class="right-button mix-right-button">
-                    <img class="right-caret" src="images/down-arrow.svg">
-                </div>
-            </div>
-            <div class="new-mixes-container">
-                <div class="new-mixes">
-                    <img class="mix-img" src="images/mix-005-320p.jpg">
-                </div>
-                <div class="new-mixes">
-                    <img class="mix-img" src="images/mix-004-320p.jpg">
-                </div>
-                <div class="new-mixes">
-                    <img class="mix-img" src="images/mix-003-320p.jpg">
-                </div>
-                <div class="new-mixes">
-                    <img class="mix-img" src="images/mix-002-320p.jpg">
-                </div>
-                <div class="new-mixes">
-                    <img class="mix-img" src="images/mix-001-320p.jpg">
-                </div>
+            <div class="splide__arrows splide__arrows--ltr">
+                <button
+                  class="splide__arrow splide__arrow--prev"
+                  type="button"
+                  aria-label="Previous slide"
+                  aria-controls="splide01-track"
+                >
+                <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+                </button>
+                <button
+                  class="splide__arrow splide__arrow--next"
+                  type="button"
+                  aria-label="Next slide"
+                  aria-controls="splide01-track"
+                >
+                <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) " stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="about_section">
-        <div class="section-title">ABOUT US</div>
-    </section>
+    <!--     MIXES SECTION     -->
 
-    <section id="crew_section">
+    <div class="section-mixes__container" id="mixes_section">
+        <div class="section-title">MIXES</div>
+        <div class="splide splide__mixes">
+            <div class="splide__track splide__track__mixes">
+                <div class="splide__list splide__list__mixes">
+                    <div class="splide__slide splide__slide__mixes">
+                        <img src="images/mix-005.jpg">
+                        <a href="https://soundcloud.com/noexpectationsxx/totmondaymixwav" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__mixes">
+                        <img src="images/mix-004.jpg">
+                        <a href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__mixes">
+                        <img src="images/mix-003.jpg">
+                        <a href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__mixes">
+                        <img src="images/mix-002.jpg">
+                        <a href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                    <div class="splide__slide splide__slide__mixes">
+                        <img src="images/mix-001.jpg">
+                        <a href="https://soundcloud.com/noexpectationsxx" class="splide__slide__info-btn">MORE INFO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="splide__arrows splide__arrows--ltr">
+                <button
+                  class="splide__arrow splide__arrow--prev"
+                  type="button"
+                  aria-label="Previous slide"
+                  aria-controls="splide01-track"
+                >
+                <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+                </button>
+                <button
+                  class="splide__arrow splide__arrow--next"
+                  type="button"
+                  aria-label="Next slide"
+                  aria-controls="splide01-track"
+                >
+                <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) " stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--     CREW SECTION     -->
+
+    <div class="section-crew__container" id="crew_section">
         <div class="section-title">CREW</div>
-        <div class="crew-member-container">
-            <a class="crew-member">aqui</a>
-            <a class="crew-member">caskit</a>
-            <a class="crew-member">lost voice</a>
-            <a class="crew-member">miguel pinedo</a>
-            <a class="crew-member">stylo</a>
-            <a class="crew-member">uu</a>
-            <a class="crew-member">will</a>
+        <div class="crew__all-members-container">
+            <div class="container-img-wrap">
+                <div class="container-img"></div>
+            </div>
+            <a href="" class="crew__member-container container-item" data-img="images/image-one.jpg">
+                <div class="crew__member-large-text"> aqui </div>
+                <div class="crew__member-small-text"> aqui </div>
+            </a>
+            <a href="https://www.instagram.com/deadboycaskit/" class="crew__member-container container-item" data-img="images/image-five.jpg">
+                <div class="crew__member-large-text"> caskit </div>
+                <div class="crew__member-small-text"> caskit </div>
+            </a>
+            <a href="https://www.instagram.com/lostvoicex/" class="crew__member-container container-item" data-img="images/image-eight.jpg">
+                <div class="crew__member-large-text"> lost voice </div>
+                <div class="crew__member-small-text"> lost voice </div>
+            </a>
+            <a href="https://www.instagram.com/miguelpinedo_/" class="crew__member-container container-item" data-img="images/image-seven.jpg">
+                <div class="crew__member-large-text"> miguel pinedo </div>
+                <div class="crew__member-small-text"> miguel pinedo </div>
+            </a>
+            <a href="https://withkoji.com/@stylosounds" class="crew__member-container container-item" data-img="images/image-one.jpg">
+                <div class="crew__member-large-text"> stylo </div>
+                <div class="crew__member-small-text"> stylo </div>
+            </a>
+            <a href="https://linktr.ee/untrustusx"  class="crew__member-container container-item" data-img="images/image-five.jpg">
+                <div class="crew__member-large-text"> untrustus </div>
+                <div class="crew__member-small-text"> untrustus </div>
+            </a>
         </div>
-        <div class="crew-member-container-2">
-            <div class="crew-member-2">aqui</div>
-            <div class="crew-member-2">caskit</div>
-            <div class="crew-member-2">lost voice</div>
-            <div class="crew-member-2">miguel pinedo</div>
-            <div class="crew-member-2">stylo</div>
-            <div class="crew-member-2">uu</div>
-            <div class="crew-member-2">will</div>
-        </div>
-    </section>
+    </div>
 
-    <section id="socials_section">
-        <div class="section-title">SOCIALS</div>
-    </section>
+    <div class="footer-row">
+        <div class="footer-col">
+            <p>Copyright © 2022 No Expectations - All Rights Reserved.</p>
+            <p>Website by <a href="">br8s</a>.</p>
+        </div>
+        
+        <div class="music__player" style="align-items: center; gap: 8px;">
+            <div class="volume__down" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="12" viewBox="0 0 24 24" fill="#c5ff29"><path d="M0 10h24v4h-24z"/></svg></div>
+            <div class="play__btn" style="cursor: pointer;"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#c5ff29" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 22v-20l18 10-18 10z"/></svg></div>
+            <div class="pause__btn" style="cursor: pointer;"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#c5ff29" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/></svg></div>
+            <div class="volume__up" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="12" fill="#c5ff29" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg></div>
+        </div>
+        <!--
+        <svg style="width: 24px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-mute" class="svg-inline--fa fa-volume-mute fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="mutePath" fill="gainsboro" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"></path></svg>
+
+        <iframe src="silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+        <audio autoplay class="song">
+            <source src="negative culture.mp3" type="audio/mpeg">
+        </audio>
+        -->
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="navAnime.js"></script>
     <script src="loadAnime.js"></script>
-    <script src="slideAnime.js"></script>
 </body>
 </html>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .pause__btn {
+        display: none;
+    }
+    .hero-banner {
+        position: relative;
+        padding: 32px;
+    }
+    .hero-banner__black-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(15, 15, 15);
+        z-index: 2000;
+    }
+    .hero-banner__content-block {
+        background-color: #000;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        padding: 20px 25px;
+        bottom: 32px;
+        margin-right: 32px;
+    }
+    .hero-banner__content-block h1 {
+        font-size: 26px;
+    }
+    .hero-banner__content-block p {
+        margin: 10px 0 15px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .hero-banner__content-block a, .splide__slide__info-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        max-width: 110px;
+        height: 40px;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 600 !important;
+        transition: background-color .2s;
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+    .splide__slide {
+        position: relative;
+    }
+    .splide__slide:hover > .splide__slide__info-btn {
+        opacity: 1;
+    }
+    .splide__slide__info-btn {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        margin: 0 auto;
+        padding: 0 12px;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+    }
+    .splide__slide__info-btn:hover, .header-nav__buy:hover {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0 12px 20px #000;
+    }
+    .hero-banner__content-block a:hover {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+    .header-nav__container {
+        width: 100%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 8px 16px;
+        position: fixed;
+        background-color: transparent;
+        z-index: 1000;
+        transition: all 200ms ease-in;
+    }
+    .header-nav__mb-container {
+        display: none;
+    }
+    .header_nav_bg {
+        background-color: rgba(0,0,0,0.95);
+    }
+    .header-nav__nav-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        margin-right: 200px;
+    }
+    .header-nav__nav-links a, .header-nav__promo {
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 15px;
+        transition: all 200ms ease-in;
+    }
+    .header-nav__promo {
+        text-align: center;
+        margin-right: 100px;
+        align-self: center;
+    }
+    .header-nav__logo-container {
+        align-self: center;
+    }
+    /*
+    .header-nav__nav-links a:hover {
+        color: #bfbfbf;
+    }
+    */
+    .disabled_nav_link {
+        color: #bfbfbf;
+    }
+    .header-nav__container img {
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+        transition: all 1000ms ease;
+        margin-right: 20px;
+    }
+    .header-nav__container img:hover {
+        transform: rotate(360deg);
+    }
+    .splide__pagination {
+        display: none;
+    }
+    .splide__track {
+        position: relative;
+        overflow: visible;
+    }
+    .splide__arrow {
+        pointer-events: all;
+        position: relative;
+        border-radius: 0;
+        border: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        transition: all 100ms ease;
+    }
+    .splide__arrow:hover {
+        transform: scale(0.9);
+        box-shadow: 0 12px 20px #000;
+    }
+    .splide__arrow:hover svg {
+        fill: #fff;
+    }
+    .splide__arrow svg {
+        position: relative;
+    }
+    .splide__arrows {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        pointer-events: none;
+    }
+    .splide__slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .section-upcoming__container, .section-mixes__container, .section-crew__container {
+        padding: 64px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .crew__all-members-container {
+        position: relative;
+        margin-bottom: 56px;
+    }
+    .crew__member-container {
+        position: relative;
+        text-decoration: none;
+    }
+    .container-img-wrap {
+        position: absolute;
+        top: -50vh;
+        left: -80px;
+        width: 400px; 
+        height: 500px;
+        overflow: hidden;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    .container-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+    .item {
+        position: relative;
+    }
+    .footer-row {
+        width: 100%;
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 16px;
+        background-color: rgba(0,0,0,0.9);
+        position: fixed;
+        bottom: 0;
+    }
+    .footer-col {
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+    .footer-col p, .footer-col a {
+        font-family: monospace;
+        font-size: 11px; 
+        color: #c5ff29;
+        color: #fff;
+    }
+    .music__player {
+        display: flex;
+        flex-direction: row;
+    }
+    .play__btn svg, .pause__btn svg, .volume__up svg, .volume__down svg {
+        transition: all 200ms ease-in-out;
+    }
+    .play__btn svg:hover, .pause__btn svg:hover, .volume__up svg:hover, .volume__down svg:hover {
+        fill: #cada9e;
+        transform: scale(0.9);
+    }
+    .header-nav__buy {
+        display: flex;
+        align-items: center;
+        color: #000;
+        background-color: #fff;
+        height: 35px;
+        padding: 0 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 110px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 600 !important;
+        transition: background-color .2s;
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+    .splide__upcoming .splide__arrows, .splide__mixes .splide__arrows {
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+    }
+    .current__nav {
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 21px;
+    }
+    /****    BURGER    ****/
+    .burger {
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s ease;
+    }
+    .burger-strip {
+        transition: all .5s ease;
+    }
+    .strip div {
+        height: 2px;
+        background: #fff;
+        margin: 7px;
+        transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 25px;
+    }
+    .burger:hover .strip div {
+        background: white;
+    }
+    .burger:hover .burger-strip-2 div:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .burger:hover .burger-strip-2 div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger:hover .burger-strip-2 div:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    @media screen and (max-width: 1400px){
+        .header-nav__nav-links {
+            margin-right: 150px;
+        }
+    }
+    @media screen and (max-width: 1250px){
+        .header-nav__nav-links {
+            margin-right: 100px;
+        }
+
+        .header-nav__promo {
+            max-width: 260px;
+        }
+    }
+    @media screen and (max-width: 1000px){
+        .header-nav__nav-links, .header-nav__promo {
+           margin-right: 50px;
+        }
+    }
+    @media screen and (max-width: 850px){ 
+        .header-nav__container {
+            display: none;
+        }
+        .header-nav__mb-container {
+            height: 65px;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            width: 100%;
+            background-color: #000;
+            border-bottom: 1px solid #333;
+            padding: 8px 16px;
+        }
+        .header-nav__mb-container img {
+            width: auto;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 8px 0;
+        }
+    }
+
+</style>
+
+<script>
+    var splide_upcoming = new Splide( '.splide__upcoming', {
+        type   : 'loop',
+        padding: '32px',
+        perPage: 4,
+        perMove: 1,
+        gap: '12px',
+        autoScroll: {
+            speed: 0.6,
+        },
+        breakpoints: {
+        1050: {
+            perPage: 3,
+        },
+        750: {
+            perPage: 2,
+        },
+        480: {
+            perPage: 1,
+        },
+    },
+
+    });
+    splide_upcoming.mount();
+    //splide_upcoming.mount( window.splide.Extensions );
+
+    var splide_mixes = new Splide( '.splide__mixes', {
+        type   : 'loop',
+        padding: '32px',
+        perPage: 4,
+        perMove: 1,
+        gap: '12px',
+        autoScroll: {
+            speed: 0.6,
+        },
+        breakpoints: {
+        1050: {
+            perPage: 3,
+        },
+        750: {
+            perPage: 2,
+        },
+        480: {
+            perPage: 1,
+        },
+    },
+
+    });
+    splide_mixes.mount();
+    //splide_mixes.mount( window.splide.Extensions );
+
+    var splide__upcoming = document.querySelector('.splide__upcoming');
+
+    splide__upcoming.addEventListener('mouseenter', event => {
+        document.querySelector('.splide__upcoming .splide__arrows').style.opacity = 1;
+    })
+
+    splide__upcoming.addEventListener('mouseleave', event => {
+        document.querySelector('.splide__upcoming .splide__arrows').style.opacity = 0;
+    })
+
+    var splide__mixes = document.querySelector('.splide__mixes');
+
+    splide__mixes.addEventListener('mouseenter', event => {
+        document.querySelector('.splide__mixes .splide__arrows').style.opacity = 1;
+    })
+
+    splide__mixes.addEventListener('mouseleave', event => {
+        document.querySelector('.splide__mixes .splide__arrows').style.opacity = 0;
+    })
+
+</script>
+
+<script>
+    const allcontainer = gsap.utils.toArray(".container-item");
+    const venueImageWrap = document.querySelector(".container-img-wrap");
+    const venueImage = document.querySelector(".container-img");
+
+    function initcontainer() {
+        allcontainer.forEach((link) => {
+            link.addEventListener("mouseenter", venueHover);
+            link.addEventListener("mouseleave", venueHover);
+            link.addEventListener("mousemove", moveVenueImage);
+        });
+    }
+
+    function moveVenueImage(e) {
+        let xpos = e.clientX;
+        let ypos = e.clientY;
+        const tl = gsap.timeline();
+        tl.to(venueImageWrap, {
+            x: xpos,
+            y: ypos,
+        });
+    }
+
+    function venueHover(e) {
+        if (e.type === "mouseenter") {
+            const targetImage = e.target.dataset.img;
+
+            const tl = gsap.timeline();
+            tl.set(venueImage, {
+                backgroundImage: `url(${targetImage})`,
+            }).to(venueImageWrap, {
+                duration: 0.5,
+                autoAlpha: 1,
+            });
+        } else if (e.type === "mouseleave") {
+            const tl = gsap.timeline();
+            tl.to(venueImageWrap, {
+                duration: 0.5,
+                autoAlpha: 0,
+            });
+        }
+    }
+
+    function init() {
+        initcontainer();
+    }
+
+    window.addEventListener("load", function () {
+        init();
+    });
+
+</script>
+
+<script>
+    /****    GRAINED JS    ****/
+    var options = {
+    "animate": true,
+    "patternWidth": 100,
+    "patternHeight": 100,
+    "grainOpacity": 0.46,
+    "grainDensity": 1,
+    "grainWidth": 1,
+    "grainHeight": 1
+    }
+
+    grained('#grid_overlay_container', options);
+    document.querySelector('#grid_overlay_container').style.position = 'fixed';
+
+    /****    MUSIC    ****/
+    window.addEventListener('load', event => {
+        var song_player = document.querySelector('.song');
+        var musicOn = true;
+
+        document.querySelector('.play__btn').addEventListener('click' , event => {
+            song_player.play();
+            document.querySelector('.pause__btn').style.display = 'block';
+            document.querySelector('.play__btn').style.display = 'none';
+        })
+        document.querySelector('.pause__btn').addEventListener('click' , event => {
+            song_player.pause();
+            document.querySelector('.pause__btn').style.display = 'none';
+            document.querySelector('.play__btn').style.display = 'block';
+        })
+        document.querySelector('.volume__down').addEventListener('click' , event => {
+            song_player.volume -= 0.1;
+        })
+        document.querySelector('.volume__up').addEventListener('click' , event => {
+            song_player.volume += 0.1;
+        })
+
+        /*
+        document.querySelector('.fa-volume-mute').addEventListener('click', () => {
+            if(musicOn === true) {
+                document.querySelector('.song').pause();
+                document.querySelector('.mutePath').style.fill = "#c5ff29";
+                musicOn = false;
+            }
+            else{
+                document.querySelector('.song').play();
+                document.querySelector('.mutePath').style.fill = "gainsboro";
+                musicOn = true;
+            }
+        })
+        */
+    })
+
+    var header_nav = document.querySelector('.header-nav__container');
+
+    window.addEventListener("scroll", event => {
+        let scrollY = this.scrollY;
+
+        if(scrollY > 60) {
+            header_nav.classList.add('header_nav_bg');
+        }
+        else if(scrollY <= 60){
+            header_nav.classList.remove('header_nav_bg');
+        }
+    });
+
+    window.addEventListener('load', event => {
+        var nav_links = document.querySelectorAll('.header-nav__nav-link')
+
+        for(var x = 0; x < nav_links.length; x++) {
+            nav_links[x].addEventListener('mouseover', event => {
+            })
+            
+            nav_links[x].addEventListener('mouseleave', event => {
+            })
+        }
+    })
+</script>

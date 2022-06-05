@@ -18,7 +18,7 @@ body{
 
 #load_animation {
     position: fixed;
-    z-index: 10;
+    z-index: 2000;
     height: 100vh;
     width: 100%;
     background-color: rgb(5, 5, 5);
@@ -51,8 +51,8 @@ body{
     pointer-events: none;
 }
 
-header {
-    height: 90vh;
+.hero-banner {
+    height: 75vh;
     width: 100%;
     background-image: url("images/LANDING-PAGE.gif");
     background-position: center;
@@ -61,11 +61,13 @@ header {
 }
 
 #ne_logo_container {
-    height: 100vh;
+    /* background-color: rgb(9, 9, 9); */
+    z-index: 4;
+    height: 7.5vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
 }
 
@@ -109,147 +111,13 @@ header {
     opacity: 0;
 }
 
-#nav_button {
-    position: fixed;
-    z-index: 5;
-    height: 1.4rem;
-    width: 1.4rem;
-    top: 0;
-    left: 0;
-    background-image: url("images/burger.png");
-    background-size: contain;
-    margin: 1.5rem 2rem;
-}
-
-#nav_button:hover {
-    cursor: pointer;
-}
-
-#exit_button {
-    position: absolute;
-    height:1rem;
-    width: 1rem;
-    top: 0;
-    right: 0;
-    background-image: url("images/cross.svg");
-    background-size: contain;
-    margin: 1rem;
-    opacity: 20%;
-}
-
-#exit_button:hover {
-    cursor: pointer;
-}
-
-/* BUTTONS */
-
-.all-upcoming-events-container {
-    width: 150%;
-    display: flex;
-    align-items: center;
-}
-
-.all-upcoming-mixes-container {
-    width: 125%;
-    display: flex;
-    align-items: center;
-}
-
-.upcoming-events-button-container {
-    position: absolute;
-    z-index: 6;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.5rem;
-}
-
-.upcoming-mixes-button-container {
-    position: absolute;
-    z-index: 6;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.5rem;
-}
-
-.left-button {
-    height: 5vh;
-    width: 4vh;
-    background-color: white;
-    left: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-button {
-    height: 5vh;
-    width: 4vh;
-    background-color: white;
-    right: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
- .left-caret {
-    object-fit: contain;
-    transform: rotate(90deg);
-    opacity: 0.6;
-    padding: 0.3rem;
- }
-
- .right-caret {
-    object-fit: contain;
-    transform: rotate(-90deg);
-    opacity: 0.6;
-    padding: 0.3rem;
- }
-
-
 /* UPCOMING SECTION */
 
 .section-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin: 3.5rem 2rem;
-}
-
-.upcoming-events-container {
-    width: 150%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.upcoming-event {
-    width: 25%;
-    margin: 0.5rem;
-}
-
-.event-img {
-    width: 100%;
-}
-
-/* MIXES SECTION */
-
-.new-mixes-container {
-    width: 125%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.new-mixes {
-    width: 25%;
-    margin: 0.5rem;
-}
-
-.mix-img {
-    width: 100%;
+    margin-bottom: 3.5rem;
+    padding: 0 16px;
 }
 
 /* CREW SECTION */
@@ -260,42 +128,32 @@ header {
     background-color: rgb(5, 5, 5);
 }
 
-.crew-member-container {
-    padding: 10rem;
+.crew__all-member-container {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.crew-member-container-2 {
-    position: absolute;
-    top: 0;
-    padding: 15.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.crew-member {
+.crew__member-large-text {
+    pointer-events: none;
     font-family: 'UnifrakturMaguntia', cursive;
+    text-align: center;
     font-size: 8rem;
     padding: 0.5rem;
     opacity: 5%;
 }
 
-.crew-member:hover {
-    cursor: pointer;
-}
-
-.crew-member-2 {
-    font-size: 1rem;
-    font-weight: bold;
+.crew__member-small-text {
+    pointer-events: none;
+    font-weight: 700;
     text-transform: uppercase;
-    padding: 4rem;
-}
-
-.crew-member-2:hover {
-    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 14px;
 }
