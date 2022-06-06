@@ -131,23 +131,23 @@
                 <div class="splide__list splide__list__mixes">
                     <a href="https://soundcloud.com/noexpectationsxx/totmondaymixwav" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-005.jpg">
-                        <a href="https://soundcloud.com/noexpectationsxx/totmondaymixwav" class="splide__slide__info-btn">MORE INFO</a>
+                        <div class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-004.jpg">
-                        <a href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide__info-btn">MORE INFO</a>
+                        <div href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-003.jpg">
-                        <a href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide__info-btn">MORE INFO</a>
+                        <div href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-002.jpg">
-                        <a href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide__info-btn">MORE INFO</a>
+                        <div href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-001.jpg">
-                        <a href="https://soundcloud.com/noexpectationsxx" class="splide__slide__info-btn">MORE INFO</a>
+                        <div href="https://soundcloud.com/noexpectationsxx" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                 </div>
             </div>
@@ -436,8 +436,8 @@
         text-decoration: none;
     }
     .container-img-wrap {
-        position: absolute;
-        top: -50vh;
+        position: fixed;
+        top: -40vh;
         left: -80px;
         width: 400px; 
         height: 500px;
@@ -617,12 +617,13 @@
 
         }
         .header-nav__mb-slideout  {
-            display: none;
+            display: flex;
             height: calc(100vh - 65px);
             position: relative;
-            left: -10000px;
+            left: -1000px;
             padding: 0 32px;
             background-color: rgba(0, 0, 0, 0.9);
+            transition: all 0.3s ease-in-out;
         }
         .splide__upcoming .splide__arrows, .splide__mixes .splide__arrows {
             opacity: 1;
@@ -634,6 +635,7 @@
         }
         .crew__member-large-text {
             font-size: 3.5rem;
+            padding: 1rem 0;
         }
         .section-upcoming__container, .section-mixes__container, .section-crew__container 
         {
@@ -646,6 +648,14 @@
         .header-nav__nav-links a, .header-nav__promo {
             font-size: 20px; 
             line-height: 24px;
+        }
+        .splide__arrows {
+            display: none !important;
+        }
+        .container-img-wrap {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -733,9 +743,14 @@
 
     function initcontainer() {
         allcontainer.forEach((link) => {
-            link.addEventListener("mouseenter", venueHover);
-            link.addEventListener("mouseleave", venueHover);
-            link.addEventListener("mousemove", moveVenueImage);
+            if(window.innerWidth > 850){
+                link.addEventListener("mouseenter", venueHover);
+                link.addEventListener("mouseleave", venueHover);
+                link.addEventListener("mousemove", moveVenueImage);
+            }
+            else {
+                link.addEventListener("click", venueClick);
+            }
         });
     }
 
@@ -769,6 +784,18 @@
         }
     }
 
+    function venueClick(e){
+        const targetImage = e.target.dataset.img;
+
+        const tl = gsap.timeline();
+        tl.set(venueImage, {
+            backgroundImage: `url(${targetImage})`,
+        }).to(venueImageWrap, {
+            duration: 0.5,
+            autoAlpha: 1,
+        });
+    }
+
     function init() {
         initcontainer();
     }
@@ -791,8 +818,7 @@
 
     burger.addEventListener('click', event => {
         if(!menu__open){
-            slideout.style.display = 'flex';
-            slideout.style.left = 0;
+            slideout.style.transform = 'translate(1000px)';
             menu__open = true;
 
             burger_strip_first_child.classList.add('burger-click-1');
@@ -800,8 +826,7 @@
             burger_strip_last_child.classList.add('burger-click-3');
         }
         else {
-            slideout.style.display = 'none';
-            slideout.style.left = '10000px';
+            slideout.style.transform = 'translate(-1000px)';
             menu__open = false;
 
             burger_strip_first_child.classList.remove('burger-click-1');
@@ -814,8 +839,7 @@
 
     for(var x = 0; x < mb_nav_links.length; x++){
         mb_nav_links[x].addEventListener('click', event => {
-            slideout.style.display = 'none';
-            slideout.style.left = '10000px';
+            slideout.style.transform = 'translate(-1000px)';
             menu__open = false;
 
             burger_strip_first_child.classList.remove('burger-click-1');

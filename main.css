@@ -52,7 +52,7 @@ body{
 }
 
 .hero-banner {
-    height: 75vh;
+    height: 85vh;
     width: 100%;
     background-image: url("images/LANDING-PAGE.gif");
     background-position: center;
@@ -141,8 +141,8 @@ body{
     font-family: 'UnifrakturMaguntia', cursive;
     text-align: center;
     font-size: 8rem;
-    padding: 0.5rem;
-    opacity: 7%;
+    padding: 2rem 0.5rem;
+    opacity: 14%;
 }
 
 .crew__member-small-text {
