@@ -140,9 +140,9 @@ body{
     pointer-events: none;
     font-family: 'UnifrakturMaguntia', cursive;
     text-align: center;
-    font-size: 8rem;
-    padding: 2rem 0.5rem;
-    opacity: 14%;
+    font-size: 8rem; 
+    padding: 0.5rem;
+    opacity: 7%;
 }
 
 .crew__member-small-text {
