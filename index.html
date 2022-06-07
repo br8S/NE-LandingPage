@@ -207,7 +207,7 @@
         </div>
     </div>
 
-    <div class="footer-row">
+    <div class="footer-row" style="display: none;">
         <div class="footer-col">
             <p>Copyright © 2022 No Expectations - All Rights Reserved.</p>
             <p>Website by <a href="">br8s</a>.</p>
@@ -291,6 +291,14 @@
     }
     .splide__slide {
         position: relative;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+    }
+    .splide__slide:hover {
+        transform: scale(1.03);
+    }
+    .splide__slide:hover > .splide__slide__overlay {
+        opacity: 0.4 !important;
     }
     .splide__slide:hover > .splide__slide__info-btn {
         opacity: 1;
@@ -304,6 +312,7 @@
         padding: 0 12px;
         opacity: 0;
         transition: all 0.25s ease-in-out;
+        z-index: 200;
     }
     .splide__slide__info-btn:hover, .header-nav__buy:hover {
         background-color: #000;
@@ -419,6 +428,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: all 0.25s ease-in-out;
     }
     .section-upcoming__container, .section-mixes__container, .section-crew__container {
         padding: 64px 0;
@@ -552,6 +562,9 @@
     .burger-click-3 {
         transform: translateY(-9px) rotate(-45deg);
     }
+    .splide__slide:hover > img {
+        filter: saturate(200%);
+    }
     @media screen and (max-width: 1400px){
         .header-nav__nav-links {
             margin-right: 150px;
@@ -576,6 +589,7 @@
             display: none;
         }
         .header-nav__mb-container {
+            pointer-events: none;
             width: 100%;
             position: fixed;
             z-index: 1000;
@@ -583,6 +597,7 @@
             flex-direction: column;
         }
         .header-nav__mb-header {
+            pointer-events: all;
             position: relative;
             height: 65px;
             display: flex;
@@ -617,7 +632,9 @@
 
         }
         .header-nav__mb-slideout  {
+            pointer-events: all;
             display: flex;
+            visibility: hidden;
             height: calc(100vh - 65px);
             position: relative;
             left: -1000px;
@@ -818,6 +835,7 @@
 
     burger.addEventListener('click', event => {
         if(!menu__open){
+            slideout.style.visibility = 'visible';
             slideout.style.transform = 'translate(1000px)';
             menu__open = true;
 
@@ -826,6 +844,7 @@
             burger_strip_last_child.classList.add('burger-click-3');
         }
         else {
+            slideout.style.visibility = 'hidden';
             slideout.style.transform = 'translate(-1000px)';
             menu__open = false;
 
@@ -839,6 +858,7 @@
 
     for(var x = 0; x < mb_nav_links.length; x++){
         mb_nav_links[x].addEventListener('click', event => {
+            slideout.style.visibility = 'hidden';
             slideout.style.transform = 'translate(-1000px)';
             menu__open = false;
 
