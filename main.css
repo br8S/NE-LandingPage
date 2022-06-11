@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
 @font-face {
 font-family: 'NeueMetanaNext';
@@ -146,7 +147,6 @@ body{
 .crew__member-large-text {
     pointer-events: none;
     font-family: 'Dela Gothic One', cursive;
-    font-family: 'NeueMetanaNext';
     text-align: center;
     font-size: 8rem; 
     opacity: 17%;
