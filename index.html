@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide-core.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="grained.min.js"></script>
-    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
-    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 <body>
     <div id="load_animation">
@@ -29,24 +32,17 @@
         <div class="h-line1" style="position: absolute; top: 60%; width: 100%; height: 1px; background-color: #fff;"></div>
         <div class="h-line2" style="position: absolute; top: 20%; width: 100%; height: 1px; background-color: #fff;"></div>
     </div>
-
-    <div class="005_lineup_modal" style="width: 100%; display: none;">
-        <div style="display: flex; width: 100%;">
-            <div style="flex: 1;">
-                <img src="images/005_hellbound.jpg">
-            </div>
-            <div style="flex: 1;">
-                <img src="images/005_revel.jpg">
-            </div>
-        </div>
-        <div style="display: flex; width: 100%;">
-            <img style="flex: 1;" src="images/005_toke.jpg">
-            <img style="flex: 1;" src="images/005_ophnam.jpg">
-            <img style="flex: 1;" src="images/005_miguel.jpg">
-            <img style="flex: 1;" src="images/005_kenay.jpg">
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item">⚠</div>
+            <div class="ticker__item">GET LOST IN YOUR DREAMLAND?</div>
+            <div class="ticker__item">✱</div>
+            <div class="ticker__item">TEXT "NO EXPECTATIONS" TO 33777 FOR ALL INFO</div>
+            <div class="ticker__item">✱</div>
+            <div class="ticker__item">AN IMAGINED AND UNREALISTICALLY IDEAL WORLD.</div>
+            <div class="ticker__item">⚠</div>
         </div>
     </div>
-
     <div class="header-nav__container" style="background-color: #000; justify-content: space-between; border-bottom: 1px solid #333;">
         <div style="display: flex; height: 100%;">
             <a href="#header_container">
@@ -57,9 +53,8 @@
                 <a class="header-nav__nav-link" href="#mixes_section"> MIXES </a>
                 <a class="header-nav__nav-link" href="#crew_section"> CREW </a>
             </div>
-            <div class="header-nav__promo" style="word-spacing: 2px;">TEXT "NO EXPECTATIONS" TO 33777 FOR ALL INFO</div>
         </div>
-        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html" class="header-nav__buy">BUY NE005</a>
+        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html" class="header-nav__buy">BUY TICKETS</a>
     </div>
 
     <div class="header-nav__mb-container">
@@ -81,41 +76,164 @@
                 <a class="header-nav__nav-link" href="#crew_section"> CREW </a>
                 <a class="header-nav__nav-link"> ABOUT </a>
             </div>
+            <div style="margin-top: 32px; font-weight: bold; cursor: pointer; text-decoration: none; font-size: 20px; line-height: 24px; transition: all 200ms ease-in;">FOLLOW US</div>
+            <div class="footer-socials-container" style="display: flex; gap: 24px; align-items: center; margin-top: 24px; height: 24px;">
+                <a class="social social_twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a class="social social_instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a class="social social_spotify">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.098 10.638c-3.868-2.297-10.248-2.508-13.941-1.387-.593.18-1.22-.155-1.399-.748-.18-.593.154-1.22.748-1.4 4.239-1.287 11.285-1.038 15.738 1.605.533.317.708 1.005.392 1.538-.316.533-1.005.709-1.538.392zm-.126 3.403c-.272.44-.847.578-1.287.308-3.225-1.982-8.142-2.557-11.958-1.399-.494.15-1.017-.129-1.167-.623-.149-.495.13-1.016.624-1.167 4.358-1.322 9.776-.682 13.48 1.595.44.27.578.847.308 1.286zm-1.469 3.267c-.215.354-.676.465-1.028.249-2.818-1.722-6.365-2.111-10.542-1.157-.402.092-.803-.16-.895-.562-.092-.403.159-.804.562-.896 4.571-1.045 8.492-.595 11.655 1.338.353.215.464.676.248 1.028zm-5.503-17.308c-6.627 0-12 5.373-12 12 0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12z"/></svg>
+                </a>
+                <a class="social social_soundcloud">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 17.939h-1v-8.068c.308-.231.639-.429 1-.566v8.634zm3 0h1v-9.224c-.229.265-.443.548-.621.857l-.379-.184v8.551zm-2 0h1v-8.848c-.508-.079-.623-.05-1-.01v8.858zm-4 0h1v-7.02c-.312.458-.555.971-.692 1.535l-.308-.182v5.667zm-3-5.25c-.606.547-1 1.354-1 2.268 0 .914.394 1.721 1 2.268v-4.536zm18.879-.671c-.204-2.837-2.404-5.079-5.117-5.079-1.022 0-1.964.328-2.762.877v10.123h9.089c1.607 0 2.911-1.393 2.911-3.106 0-2.233-2.168-3.772-4.121-2.815zm-16.879-.027c-.302-.024-.526-.03-1 .122v5.689c.446.143.636.138 1 .138v-5.949z"/></svg>
+                </a>
+                <a class="social social_facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                </a>
+            </div>
             <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html" class="header-nav__buy">BUY NE005</a>
         </div>
     </div>
+ 
+    <div class="splide splide__hero" id="header_container" style="display: none;">
+        <div class="splide__track splide__track__hero">
+            <div class="splide__list splide__list__hero">
+                <div class="splide__slide splide__slide__hero">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="images/katharsis_teaser.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-banner__content-block">
+                        <h1>006 NO EXPECTATIONS DNB</h1>
+                        <p> The 00X series makes its return and you already know how we do it.
+                            Join us for our first ever drum and bass renegade.</p>    
 
-    <div class="hero-banner" id="header_container">
-        <div class="hero-banner__content-block">
-            <h1>005 NO EXPECTATIONS X NULLSECT</h1>
-            <p> The 00X series makes its return and you already know how we do it.
-                Join us for our first ever warehouse gathering featuring a takeover by none other than NULLSECT. </p>    
+                        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html">MORE INFO</a>
+                    </div>
+                </div>
+                <div class="hero-banner splide__slide splide__slide__hero">
+                    <div class="hero-banner__content-block">
+                        <h1>005 NO EXPECTATIONS X NULLSECT</h1>
+                        <p> The 00X series makes its return and you already know how we do it.
+                            Join us for our first ever warehouse gathering featuring a takeover by none other than NULLSECT. </p>    
 
-            <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html">MORE INFO</a>
+                        <a href="https://www.purplepass.com/#236332/No_Expectations-NO_EXPECTATIONS_005-Secret_Location-June-18-2022.html">MORE INFO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-banner__sound">
+            <img class="hero-banner__sound-on" src="images/iconmonstr-audio-21-240.png">
+            <img class="hero-banner__sound-off" src="images/iconmonstr-audio-22-240.png">
+        </div>
+        <div class="splide__arrows splide__arrows--ltr">
+            <button
+              class="splide__arrow splide__arrow--prev"
+              type="button"
+              aria-label="Previous slide"
+              aria-controls="splide01-track"
+            >
+            <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+            </button>
+            <button
+              class="splide__arrow splide__arrow--next"
+              type="button"
+              aria-label="Next slide"
+              aria-controls="splide01-track"
+            >
+            <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="left" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) " stroke="#000000"><g id="Oval-14-+-Path-27-Copy-7" transform="translate(4.500000, 10.000000) rotate(-180.000000) translate(-4.500000, -10.000000) translate(0.000000, -0.000000)"><polyline id="Path-27" points="0.669996964 0.7692308 8.3621169 9.8396184 0.543956014 19.0703876"></polyline></g></g></g></svg>
+            </button>
         </div>
     </div>
 
-    <!--     UPCOMING SECTION     -->
+    <!-- CREATE SCREENS ROTATING AROUND THE USER -->
+    
+    <video autoplay muted loop id="testVideo">
+        <source src="images/katharsis_teaser.mp4" type="video/mp4">
+    </video>
 
+    <div style="width: 100%; display: flex;">
+        <canvas class="webgl" style="margin: 0 auto;"></canvas>
+    </div>
+
+    <!--     UPCOMING SECTION     -->
     <div class="section-upcoming__container" id="upcoming_section">
         <div class="section-title">EVENTS</div>
         <div class="splide splide__upcoming">
             <div class="splide__track splide__track__upcoming">
                 <div class="splide__list splide__list__upcoming">
                     <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/006.jpg">
+                        <div class="splide__slide__info">
+                            <h4>NE006 DRUM N BASS</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
+                        <div class="splide__slide__info-btn" id="event_005_btn">MORE INFO</div>
+                    </div>
+                    <div class="splide__slide splide__slide__upcoming">
+                        <img src="images/dreamland.jpg">
+                        <div class="splide__slide__info">
+                            <h4>DREAMLAND?</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
+                        <div class="splide__slide__info-btn" id="event_005_btn">MORE INFO</div>
+                    </div>
+                    <div class="splide__slide splide__slide__upcoming">
                         <img src="images/005-event.jpg">
-                        <a href="" class="splide__slide__info-btn">MORE INFO</a>
+                        <div class="splide__slide__info">
+                            <h4>NE005 NULLSECT</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
+                        <div class="splide__slide__info-btn" id="event_005_btn">MORE INFO</div>
                     </div>
                     <div class="splide__slide splide__slide__upcoming">
                         <img src="images/004-event.jpg">
+                        <div class="splide__slide__info">
+                            <h4>NE005 TECHNO</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <a href="" class="splide__slide__info-btn">MORE INFO</a>
                     </div>
                     <div class="splide__slide splide__slide__upcoming">
                         <img src="images/witching.jpg">
+                        <div class="splide__slide__info">
+                            <h4>NE005 TECHNO</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <a href="" class="splide__slide__info-btn">MORE INFO</a>
                     </div>
                     <div class="splide__slide splide__slide__upcoming">
                         <img src="images/13th.jpg">
+                        <div class="splide__slide__info">
+                            <h4>NE005 TECHNO</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <a href="" class="splide__slide__info-btn">MORE INFO</a>
                     </div>
                 </div>
@@ -142,7 +260,6 @@
     </div>
 
     <!--     MIXES SECTION     -->
-
     <div class="section-mixes__container" id="mixes_section">
         <div class="section-title">MIXES</div>
         <div class="splide splide__mixes">
@@ -150,22 +267,62 @@
                 <div class="splide__list splide__list__mixes">
                     <a href="https://soundcloud.com/noexpectationsxx/totmondaymixwav" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-005.jpg">
+                        <div class="splide__slide__info">
+                            <h4>TOKEONETOKA</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <div class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-004.jpg">
+                        <div class="splide__slide__info">
+                            <h4>UNTRUSTUS</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <div href="https://soundcloud.com/noexpectationsxx/mondaymix-004-untrust-us" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-003.jpg">
+                        <div class="splide__slide__info">
+                            <h4>QUANTUM FUNK</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <div href="https://soundcloud.com/noexpectationsxx/monday-mix-003-quantum-funk" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-002.jpg">
+                        <div class="splide__slide__info">
+                            <h4>CASKIT</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <div href="https://soundcloud.com/noexpectationsxx/mixmonday002-caskit" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                     <a href="https://soundcloud.com/noexpectationsxx" class="splide__slide splide__slide__mixes">
                         <img src="images/mix-001.jpg">
+                        <div class="splide__slide__info">
+                            <h4>AWKEY</h4>
+                            <div class="splide__slide__info-desc">
+                                <span class="splide__slide__info-city">San Diego |</span>
+                                <span class="splide__slide__info-date">TBA |</span>
+                                <span class="splide__slide__info-time">21:00 - 4:00 PST</span>
+                            </div>
+                        </div>
                         <div href="https://soundcloud.com/noexpectationsxx" class="splide__slide__info-btn">MORE INFO</div>
                     </a>
                 </div>
@@ -192,7 +349,6 @@
     </div>
 
     <!--     CREW SECTION     -->
-
     <div class="section-crew__container" id="crew_section">
         <div class="section-title">CREW</div>
         <div class="crew__all-members-container">
@@ -230,19 +386,19 @@
         <img src="images/NE-LOGO-T.png" style="height: 60px; width: 60px; margin-bottom: 16px;">
         <div style="font-size: 14px; font-weight: 700;">© 2022 NO EXPECTATIONS</div>
         <div class="footer-socials-container" style="display: flex; gap: 24px; align-items: center; margin-top: 24px;">
-            <a class="social social_twitter">
+            <a href="https://twitter.com/xnoexpectations" class="social social_twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
             </a>
-            <a class="social social_instagram">
+            <a href="https://www.instagram.com/noexpectationsxx/" class="social social_instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
             <a class="social social_spotify">
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.098 10.638c-3.868-2.297-10.248-2.508-13.941-1.387-.593.18-1.22-.155-1.399-.748-.18-.593.154-1.22.748-1.4 4.239-1.287 11.285-1.038 15.738 1.605.533.317.708 1.005.392 1.538-.316.533-1.005.709-1.538.392zm-.126 3.403c-.272.44-.847.578-1.287.308-3.225-1.982-8.142-2.557-11.958-1.399-.494.15-1.017-.129-1.167-.623-.149-.495.13-1.016.624-1.167 4.358-1.322 9.776-.682 13.48 1.595.44.27.578.847.308 1.286zm-1.469 3.267c-.215.354-.676.465-1.028.249-2.818-1.722-6.365-2.111-10.542-1.157-.402.092-.803-.16-.895-.562-.092-.403.159-.804.562-.896 4.571-1.045 8.492-.595 11.655 1.338.353.215.464.676.248 1.028zm-5.503-17.308c-6.627 0-12 5.373-12 12 0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12z"/></svg>
             </a>
-            <a class="social social_soundcloud">
+            <a href="https://soundcloud.com/noexpectationsxx" class="social social_soundcloud">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 17.939h-1v-8.068c.308-.231.639-.429 1-.566v8.634zm3 0h1v-9.224c-.229.265-.443.548-.621.857l-.379-.184v8.551zm-2 0h1v-8.848c-.508-.079-.623-.05-1-.01v8.858zm-4 0h1v-7.02c-.312.458-.555.971-.692 1.535l-.308-.182v5.667zm-3-5.25c-.606.547-1 1.354-1 2.268 0 .914.394 1.721 1 2.268v-4.536zm18.879-.671c-.204-2.837-2.404-5.079-5.117-5.079-1.022 0-1.964.328-2.762.877v10.123h9.089c1.607 0 2.911-1.393 2.911-3.106 0-2.233-2.168-3.772-4.121-2.815zm-16.879-.027c-.302-.024-.526-.03-1 .122v5.689c.446.143.636.138 1 .138v-5.949z"/></svg>
             </a>
-            <a class="social social_facebook">
+            <a href="https://www.facebook.com/noexpectationsd" class="social social_facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
             </a>
         </div>
@@ -253,503 +409,52 @@
             <p>Copyright © 2022 No Expectations - All Rights Reserved.</p>
             <p>Website by <a href="">br8s</a>.</p>
         </div>
-        
-        <div class="music__player" style="align-items: center; gap: 8px;">
-            <div class="volume__down" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="12" viewBox="0 0 24 24" fill="#c5ff29"><path d="M0 10h24v4h-24z"/></svg></div>
-            <div class="play__btn" style="cursor: pointer;"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#c5ff29" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 22v-20l18 10-18 10z"/></svg></div>
-            <div class="pause__btn" style="cursor: pointer;"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#c5ff29" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/></svg></div>
-            <div class="volume__up" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="12" fill="#c5ff29" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg></div>
-        </div>
-        <!--
-        <svg style="width: 24px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-mute" class="svg-inline--fa fa-volume-mute fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="mutePath" fill="gainsboro" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"></path></svg>
-
-        <iframe src="silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-        <audio autoplay class="song">
-            <source src="negative culture.mp3" type="audio/mpeg">
-        </audio>
-        -->
     </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="loadAnime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.3/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.3/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.3/examples/js/loaders/DRACOLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.3/examples/js/controls/OrbitControls.min.js"></script>
 </body>
 </html>
 
-<style>
-     .footer-socials-container a {
-         height: 100%;
-     }
-    .footer-socials-container a svg {
-        fill: #fff;
-        height: 100%;
-    }
-    html {
-        scroll-behavior: smooth;
-    }
-    .pause__btn {
-        display: none;
-    }
-    .hero-banner {
-        position: relative;
-        padding: 32px;
-    }
-    .hero-banner__black-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(15, 15, 15);
-        z-index: 2000;
-    }
-    .hero-banner__content-block {
-        background-color: #000;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        position: absolute;
-        padding: 20px 25px;
-        bottom: 32px;
-        margin-right: 32px;
-    }
-    .hero-banner__content-block h1 {
-        font-size: 26px;
-    }
-    .hero-banner__content-block p {
-        margin: 10px 0 15px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .hero-banner__content-block a, .splide__slide__info-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        max-width: 110px;
-        height: 40px;
-        line-height: 14px;
-        font-size: 14px;
-        font-weight: 600 !important;
-        transition: background-color .2s;
-        background-color: #fff;
-        color: #000;
-        text-decoration: none;
-    }
-    .splide__slide {
-        position: relative;
-        cursor: pointer;
-        transition: all 0.25s ease-in-out;
-    }
-    .splide__slide:hover {
-        /*transform: scale(1.03);*/
-    }
-    .splide__slide:hover > .splide__slide__overlay {
-        opacity: 0.4 !important;
-    }
-    .splide__slide:hover > .splide__slide__info-btn {
-        opacity: 1;
-    }
-    .splide__slide__info-btn {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -70%);
-        margin: 0 auto;
-        padding: 0 12px;
-        opacity: 0;
-        transition: all 0.25s ease-in-out;
-        z-index: 200;
-    }
-    .splide__slide__info-btn:hover, .header-nav__buy:hover {
-        background-color: #000;
-        color: #fff;
-        border: 2px solid #fff;
-        box-shadow: 0 12px 20px #000;
-    }
-    .hero-banner__content-block a:hover {
-        background-color: #000;
-        color: #fff;
-        border: 2px solid #fff;
-    }
-    .header-nav__container {
-        width: 100%;
-        height: 65px;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        padding: 8px 16px;
-        position: fixed;
-        background-color: transparent;
-        z-index: 1000;
-        transition: all 200ms ease-in;
-    }
-    .header-nav__mb-container {
-        display: none;
-    }
-    .header_nav_bg {
-        background-color: rgba(0,0,0,0.95);
-    }
-    .header-nav__nav-links {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 16px;
-        margin-right: 200px;
-    }
-    .header-nav__nav-links a, .header-nav__promo {
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 15px;
-        line-height: 15px;
-        transition: all 200ms ease-in;
-    }
-    .header-nav__promo {
-        text-align: center;
-        margin-right: 100px;
-        align-self: center;
-    }
-    .header-nav__logo-container {
-        align-self: center;
-    }
-    /*
-    .header-nav__nav-links a:hover {
-        color: #bfbfbf;
-    }
-    */
-    .disabled_nav_link {
-        color: #bfbfbf;
-    }
-    .header-nav__container img {
-        width: auto;
-        height: 100%;
-        cursor: pointer;
-        transition: all 1000ms ease;
-        margin-right: 20px;
-    }
-    .header-nav__container img:hover {
-        transform: rotate(360deg);
-    }
-    .splide__pagination {
-        display: none;
-    }
-    .splide__track {
-        position: relative;
-        overflow: visible;
-    }
-    .splide__arrow {
-        pointer-events: all;
-        position: relative;
-        border-radius: 0;
-        border: none;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        transition: all 100ms ease;
-    }
-    .splide__arrow:hover {
-        transform: scale(0.9);
-        box-shadow: 0 12px 20px #000;
-    }
-    .splide__arrow:hover svg {
-        fill: #fff;
-    }
-    .splide__arrow svg {
-        position: relative;
-    }
-    .splide__arrows {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 16px;
-        pointer-events: none;
-    }
-    .splide__slide img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        transition: all 0.25s ease-in-out;
-    }
-    .section-upcoming__container, .section-mixes__container, .section-crew__container {
-        padding: 64px 0 32px 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .crew__all-members-container {
-        position: relative;
-        margin-bottom: 56px;
-    }
-    .crew__member-container {
-        position: relative;
-        text-decoration: none;
-    }
-    .container-img-wrap {
-        position: fixed;
-        top: -40vh;
-        left: -80px;
-        width: 400px; 
-        height: 500px;
-        overflow: hidden;
-        pointer-events: none;
-        visibility: hidden;
-    }
-    .container-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-    }
-    .item {
-        position: relative;
-    }
-    .footer-row {
-        width: 100%;
-        display: flex; 
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 16px;
-        background-color: rgba(0,0,0,0.9);
-        position: fixed;
-        bottom: 0;
-    }
-    .footer-col {
-        width: 100%;
-        display: flex; 
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 2px;
-    }
-    .footer-col p, .footer-col a {
-        font-family: monospace;
-        font-size: 11px; 
-        color: #c5ff29;
-        color: #fff;
-    }
-    .music__player {
-        display: flex;
-        flex-direction: row;
-    }
-    .play__btn svg, .pause__btn svg, .volume__up svg, .volume__down svg {
-        transition: all 200ms ease-in-out;
-    }
-    .play__btn svg:hover, .pause__btn svg:hover, .volume__up svg:hover, .volume__down svg:hover {
-        fill: #cada9e;
-        transform: scale(0.9);
-    }
-    .header-nav__buy {
-        display: flex;
-        align-items: center;
-        color: #000;
-        background-color: #fff;
-        height: 35px;
-        padding: 0 12px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 110px;
-        height: 40px;
-        font-size: 15px;
-        line-height: 15px;
-        font-weight: 600 !important;
-        transition: background-color .2s;
-        background-color: #fff;
-        color: #000;
-        text-decoration: none;
-    }
-    .splide__upcoming .splide__arrows, .splide__mixes .splide__arrows {
-        opacity: 0;
-        transition: opacity 0.25s ease-in-out;
-    }
-    .current__nav {
-        text-decoration: underline;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 21px;
-    }
-    /****    BURGER    ****/
-    .burger {
-        height: 100%;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all .5s ease;
-    }
-    .burger-strip {
-        transition: all .5s ease;
-    }
-    .strip div {
-        height: 2px;
-        background: #fff;
-        margin: 7px;
-        transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
-        width: 25px;
-    }
-    .burger:hover .strip div {
-        background: white;
-    }
-    .burger-click-1 {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .burger-click-2 {
-        opacity: 0;
-    }
-    .burger-click-3 {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    .splide__slide:hover > img {
-        /*filter: saturate(200%);*/
-    }
-    .nav__underline {
-        border-bottom: 4px solid #fff;
-    }
-    @media screen and (max-width: 1400px){
-        .header-nav__nav-links {
-            margin-right: 150px;
-        }
-    }
-    @media screen and (max-width: 1250px){
-        .header-nav__nav-links {
-            margin-right: 100px;
-        }
-
-        .header-nav__promo {
-            max-width: 260px;
-        }
-    }
-    @media screen and (max-width: 1000px){
-        .header-nav__nav-links, .header-nav__promo {
-           margin-right: 50px;
-        }
-    }
-    @media screen and (max-width: 850px){ 
-        .header-nav__container {
-            display: none;
-        }
-        .header-nav__mb-container {
-            pointer-events: none;
-            width: 100%;
-            position: fixed;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-        }
-        .header-nav__mb-header {
-            pointer-events: all;
-            position: relative;
-            height: 65px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 8px 16px;
-            background-color: #000;
-            border-bottom: 1px solid #333;
-        }
-        .header-nav__mb-header img {
-            width: auto;
-            height: 100%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 8px 0;
-        }
-        .header-nav__nav-links {
-            padding: 32px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-        .header-nav__buy {
-            position: absolute;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%);
-
-        }
-        .header-nav__mb-slideout  {
-            pointer-events: all;
-            display: flex;
-            visibility: hidden;
-            height: calc(100vh - 65px);
-            position: relative;
-            left: -1000px;
-            padding: 0 32px;
-            background-color: rgba(0, 0, 0, 0.9);
-            transition: all 0.3s ease-in-out;
-        }
-        .splide__upcoming .splide__arrows, .splide__mixes .splide__arrows {
-            opacity: 1;
-        }
-        .splide__arrows {
-            position: relative;
-            top: 0;
-            transform: translateY(0%)
-        }
-        .crew__member-large-text {
-            font-size: 3.5rem;
-        }
-        .section-upcoming__container, .section-mixes__container, .section-crew__container 
-        {
-            padding: 32px 0;
-            padding-bottom: 0;
-        }
-        .section-title {
-            margin-bottom: 2rem;
-        }
-        .header-nav__nav-links a, .header-nav__promo {
-            font-size: 20px; 
-            line-height: 24px;
-        }
-        .splide__arrows {
-            display: none !important;
-        }
-        .container-img-wrap {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) !important;
-        }
-    }
-
-</style>
 
 <script>
+    var splide_hero = new Splide( '.splide__hero', {
+        type   : 'loop',
+        perPage: 1,
+        perMove: 1,
+    });
+
+    splide_hero.mount();
+
     var splide_upcoming = new Splide( '.splide__upcoming', {
         type   : 'loop',
         padding: '32px',
         perPage: 4,
         perMove: 1,
         gap: '12px',
+        heightRatio : 0.3,
         autoScroll: {
             speed: 0.6,
         },
         breakpoints: {
         1050: {
             perPage: 3,
+            heightRatio : 0.4,
         },
         750: {
             perPage: 2,
+            heightRatio : 0.7,
         },
         480: {
             perPage: 1,
+            heightRatio : 1.2,
         },
     },
-
     });
 
     splide_upcoming.mount();
@@ -761,18 +466,22 @@
         perPage: 4,
         perMove: 1,
         gap: '12px',
+        heightRatio : 0.3,
         autoScroll: {
             speed: 0.6,
         },
         breakpoints: {
         1050: {
             perPage: 3,
+            heightRatio : 0.4,
         },
         750: {
             perPage: 2,
+            heightRatio : 0.7,
         },
         480: {
             perPage: 1,
+            heightRatio : 1.2,
         },
     },
 
@@ -807,20 +516,13 @@
     const allcontainer = gsap.utils.toArray(".container-item");
     const venueImageWrap = document.querySelector(".container-img-wrap");
     const venueImage = document.querySelector(".container-img");
-    const artists_text_distort = [];
-    const blotters = [];
-    const scopes = [];
     const artists = document.querySelectorAll('.crew__member-large-text');
 
     function initcontainer() {
-        //blotter();
-
         allcontainer.forEach((link) => {
             if(window.innerWidth > 850){
                 link.addEventListener("mouseenter", venueHover);
                 link.addEventListener("mouseleave", venueHover);
-                link.addEventListener("mouseenter", distortText);
-                link.addEventListener("mouseleave", removeDistortText);
                 link.addEventListener("mousemove", moveVenueImage);
             }
             else {
@@ -837,106 +539,6 @@
             x: xpos,
             y: ypos,
         });
-    }
-
-    function blotter(){
-        /****    BLOTTER JS    ****/
-        for(var x = 0; x < artists.length; x++){
-            const text = new Blotter.Text(artists[x].dataset.artist, {
-                family: "'Dela Gothic One', cursive", 
-                size: 120,
-                fill: "#fff",
-                paddingLeft: 200,
-                paddingRight: 200,
-                paddingTop: 50,
-                paddingBottom: 50,
-                
-            })
-
-            var material = new Blotter.LiquidDistortMaterial();
-
-            material.uniforms.uSpeed.value = 0.1;
-            material.uniforms.uVolatility.value = 0;
-            material.uniforms.uSeed.value = 0.1;
-
-            blotter = new Blotter(material, {
-                texts: text
-            });
-
-            scopes[x] = blotter.forText(text);
-
-            scopes[x].appendTo(artists[x]);
-        }
-    }
-
-    function removeDistortText(e){
-        var index;
-        for(var x = 0; x < allcontainer.length; x++){
-            if(e.target == allcontainer[x]){
-                index = x;
-            }
-        }
-        
-        gsap.fromTo(
-            scopes[index].material.uniforms.uVolatility,
-            0.25,
-            {
-            value: 1,
-            ease: Linear.easeIn
-            },
-            {
-            value: 0,
-            ease: Linear.easeIn
-            }
-        );
-
-        gsap.fromTo(
-            scopes[index].material.uniforms.uSeed,
-            0.25,
-            {
-            value: 0.3,
-            ease: Linear.easeIn
-            },
-            {
-            value: 0,
-            ease: Linear.easeIn
-            }
-        );
-    }
-
-    function distortText(e){
-        var index;
-        for(var x = 0; x < allcontainer.length; x++){
-            if(e.target == allcontainer[x]){
-                index = x;
-            }
-        }
-
-        gsap.fromTo(
-            scopes[index].material.uniforms.uVolatility,
-            0.25,
-            {
-            value: 0,
-            ease: Linear.easeIn
-            },
-            {
-            value: 1,
-            ease: Linear.easeIn
-            }
-        );
-        gsap.fromTo(
-            scopes[index].material.uniforms.uSeed,
-            0.25,
-            {
-            value: 0,
-            ease: Linear.easeIn
-            },
-            {
-            value: 0.3,
-            ease: Linear.easeIn
-            }
-        );
-
     }
 
     function venueHover(e) {
@@ -1038,78 +640,135 @@
 
     /****    GRAINED JS    ****/
     var options = {
-    "animate": true,
-    "patternWidth": 100,
-    "patternHeight": 100,
-    "grainOpacity": 0.46,
-    "grainDensity": 1,
-    "grainWidth": 1,
-    "grainHeight": 1
+        "animate": true,
+        "patternWidth": 100,
+        "patternHeight": 100,
+        "grainOpacity": 0.46,
+        "grainDensity": 1,
+        "grainWidth": 1,
+        "grainHeight": 1
     }
 
     grained('#grid_overlay_container', options);
     document.querySelector('#grid_overlay_container').style.position = 'fixed';
+</script>
 
-    /****    MUSIC    ****/
+<script>
     window.addEventListener('load', event => {
-        var song_player = document.querySelector('.song');
-        var musicOn = true;
+        var hero_video = document.getElementById('myVideo');
+        var sound_toggle = document.querySelector('.hero-banner__sound')
+        var sound_on = document.querySelector('.hero-banner__sound-off')
+        var sound_off = document.querySelector('.hero-banner__sound-on')
 
-        document.querySelector('.play__btn').addEventListener('click' , event => {
-            song_player.play();
-            document.querySelector('.pause__btn').style.display = 'block';
-            document.querySelector('.play__btn').style.display = 'none';
-        })
-        document.querySelector('.pause__btn').addEventListener('click' , event => {
-            song_player.pause();
-            document.querySelector('.pause__btn').style.display = 'none';
-            document.querySelector('.play__btn').style.display = 'block';
-        })
-        document.querySelector('.volume__down').addEventListener('click' , event => {
-            song_player.volume -= 0.1;
-        })
-        document.querySelector('.volume__up').addEventListener('click' , event => {
-            song_player.volume += 0.1;
-        })
-
-        /*
-        document.querySelector('.fa-volume-mute').addEventListener('click', () => {
-            if(musicOn === true) {
-                document.querySelector('.song').pause();
-                document.querySelector('.mutePath').style.fill = "#c5ff29";
-                musicOn = false;
+        sound_toggle.addEventListener('click', event => {
+            hero_video.muted = !hero_video.muted;
+            hero_video.play(); 
+            if(hero_video.muted == false){
+                sound_off.style.display = 'block'
+                sound_on.style.display = 'none'
             }
-            else{
-                document.querySelector('.song').play();
-                document.querySelector('.mutePath').style.fill = "gainsboro";
-                musicOn = true;
+            else {
+                sound_off.style.display = 'none'
+                sound_on.style.display = 'block'
             }
         })
-        */
     })
+</script>
 
-    var header_nav = document.querySelector('.header-nav__container');
+<script>
+const gui = new dat.GUI()
 
-    window.addEventListener("scroll", event => {
-        let scrollY = this.scrollY;
+const scene = new THREE.Scene()
+scene.background = new THREE.Color( 0x000000 );
 
-        if(scrollY > 60) {
-            header_nav.classList.add('header_nav_bg');
-        }
-        else if(scrollY <= 60){
-            header_nav.classList.remove('header_nav_bg');
-        }
-    });
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+scene.add(ambientLight)
 
-    window.addEventListener('load', event => {
-        var nav_links = document.querySelectorAll('.header-nav__nav-link')
+const pointLight = new THREE.PointLight( 0xff0000, 10, 100 );
+pointLight.position.set( 10, 0, 10 );
 
-        for(var x = 0; x < nav_links.length; x++) {
-            nav_links[x].addEventListener('mouseover', event => {
-            })
-            
-            nav_links[x].addEventListener('mouseleave', event => {
-            })
-        }
-    })
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 5 );
+scene.add( directionalLight );
+
+const texture = new THREE.TextureLoader().load( 'matcaps/3.png' );
+
+const dracoLoader = new THREE.DRACOLoader();
+dracoLoader.setDecoderPath( 'https://www.gstatic.com/draco/v1/decoders/' );
+
+const loader = new THREE.GLTFLoader()
+loader.setDRACOLoader(dracoLoader)
+
+const testVideo = document.getElementById( 'testVideo' );
+const videoTexture = new THREE.VideoTexture( testVideo );
+
+const geometry = new THREE.PlaneGeometry( 16, 9 );
+const videoMaterial = new THREE.MeshBasicMaterial({ map: videoTexture })
+const plane = new THREE.Mesh( geometry,  videoMaterial );
+scene.add( plane );
+
+var ne_logo;
+
+loader.load('models/NE_3D.glb',
+    (gltf) =>
+    {
+        gltf.scene.scale.set(2, 2, 2)
+        ne_logo = gltf.scene
+
+        var newMaterial = new THREE.MeshStandardMaterial({
+            map: texture,
+            metalness: 0.2,
+            roughness: 0
+        });
+        ne_logo.traverse((o) => {
+            if (o.isMesh) o.material = newMaterial;
+        });
+
+        console.log(ne_logo)
+        //scene.add(ne_logo)
+    }
+)
+
+// Sizes
+const sizes = {
+    width: 800, 
+    height: 600
+}
+
+// Camera
+const camera = new THREE.PerspectiveCamera(80, sizes.width / sizes.height)
+scene.add(camera)
+camera.position.z = 5;
+
+// Renderer
+const canvas = document.querySelector('.webgl')
+const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true
+})
+
+const controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+renderer.setSize(sizes.width, sizes.height)
+renderer.render(scene, camera)
+
+// Clock 
+const clock = new THREE.Clock()
+
+// Animations 
+const tick = () => {
+    //Clock
+    const elapsedTime = clock.getElapsedTime()
+    if(ne_logo){
+        ne_logo.rotation.y = elapsedTime * 2
+    }
+
+    controls.update()
+
+    //Render 
+    renderer.render(scene, camera)
+
+    window.requestAnimationFrame(tick)
+}
+
+tick()
 </script>
