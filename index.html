@@ -155,7 +155,7 @@
     </video>
 
     <div style="width: 100%; display: flex;">
-        <canvas class="webgl" style="margin: 0 auto;"></canvas>
+        <canvas class="webgl" style="width: 100% !important; margin: 0 auto;"></canvas>
     </div>
 
     <!--     UPCOMING SECTION     -->
@@ -679,7 +679,10 @@
 const gui = new dat.GUI()
 
 const scene = new THREE.Scene()
-scene.background = new THREE.Color( 0x000000 );
+scene.background = new THREE.Color( 0xfff );
+
+const axesHelper = new THREE.AxesHelper( 5 );
+scene.add( axesHelper );
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
 scene.add(ambientLight)
@@ -703,11 +706,39 @@ const videoTexture = new THREE.VideoTexture( testVideo );
 
 const geometry = new THREE.PlaneGeometry( 16, 9 );
 const videoMaterial = new THREE.MeshBasicMaterial({ map: videoTexture })
-const plane = new THREE.Mesh( geometry,  videoMaterial );
-scene.add( plane );
+videoMaterial.side = THREE.DoubleSide;
+
+const screen1 = new THREE.Mesh( geometry,  videoMaterial );
+const screen2 = new THREE.Mesh( geometry,  videoMaterial );
+const screen3 = new THREE.Mesh( geometry,  videoMaterial );
+const screen4 = new THREE.Mesh( geometry,  videoMaterial );
+
+
+// Center 0, 0
+// screen 1 
+// screen 2
+// screen 3
+// screen 4
+
+screen1.position.z = 12
+screen2.position.x = 12
+screen3.position.x = -12
+screen4.position.z = -12
+
+screen2.rotation.y = Math.PI / 2
+screen3.rotation.y = Math.PI / 2
+
+const group = new THREE.Group();
+group.add( screen1 );
+group.add( screen2 );
+group.add( screen3 );
+group.add( screen4 );
+
+scene.add( group );
 
 var ne_logo;
 
+/*
 loader.load('models/NE_3D.glb',
     (gltf) =>
     {
@@ -727,17 +758,18 @@ loader.load('models/NE_3D.glb',
         //scene.add(ne_logo)
     }
 )
+*/
 
 // Sizes
 const sizes = {
-    width: 800, 
+    width: 1080, 
     height: 600
 }
 
 // Camera
 const camera = new THREE.PerspectiveCamera(80, sizes.width / sizes.height)
 scene.add(camera)
-camera.position.z = 5;
+camera.position.z = 1;
 
 // Renderer
 const canvas = document.querySelector('.webgl')
@@ -761,6 +793,13 @@ const tick = () => {
     if(ne_logo){
         ne_logo.rotation.y = elapsedTime * 2
     }
+
+    /*
+    group.position.x = 20*Math.cos(elapsedTime) + 0;
+    group.position.z = 20*Math.sin(elapsedTime) + 0; 
+    */
+
+    group.rotation.y = elapsedTime/5
 
     controls.update()
 
