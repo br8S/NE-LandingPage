@@ -32,13 +32,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter var', sans-serif; 
-    font-family: 'Figtree', sans-serif;
-    font-family: 'Public Sans', sans-serif;
     color: white;
-}
-
-p, span {
-    font-family: 'Montserrat', sans-serif;
 }
 
 html, body {
@@ -398,15 +392,17 @@ html {
 }
 .splide__slide__info {
     padding: 16px;
-    background-color: #fff;
-    border-top: 1px solid #00000069;
+    background-color: rgba(255,255,255, 0.05);
 }
 .splide__slide__info h4{
     padding-bottom: 4px;
-    color: #000;
+    font-size: 16px;
+}
+.splide__slide__info-desc {
+    font-family: 'Public Sans';
 }
 .splide__slide__info-desc span {
-    color: #000;
+    color: #fff;
     font-size: 14px;
 }
 .hero-banner__content-block a:hover {
@@ -548,6 +544,9 @@ html {
     width: 100%;
     object-fit: cover;
     transition: all 0.25s ease-in-out;
+}
+.splide__slide__mixes {
+    text-decoration: none;
 }
 .splide__slide__mixes img {
     height: calc(100% - 78px);
