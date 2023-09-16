@@ -99,8 +99,8 @@ function init(){
     controls = new THREE.OrbitControls( camera, renderer.domElement )
     controls.enableDamping = true
     controls.dampingFactor = 0.025
-    controls.minDistance = 28 
-    controls.maxDistance = 28
+    //controls.minDistance = 28 
+    //controls.maxDistance = 28
 
     renderer.setSize(sizes.width, sizes.height)
 
