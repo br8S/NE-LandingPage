@@ -136,8 +136,8 @@ body {
             animation-timing-function: linear;
    -webkit-animation-name: ticker;
            animation-name: ticker;
-    -webkit-animation-duration: 20s;
-            animation-duration: 20s;
+    -webkit-animation-duration: 80s;
+            animation-duration: 80s;
   }
 
   .ticker__item {
@@ -461,7 +461,6 @@ html {
     margin-right: 30px;
 }
 .header-nav__container img:hover {
-    transform: rotate(360deg);
 }
 .hero-banner__sound {
     position: absolute;
@@ -586,9 +585,8 @@ html {
     height: 800px !important;
     position: absolute;
 }
-
-
-.section-upcoming__container, .section-mixes__container, .section-crew__container {
+.section-upcoming__container, .section-mixes__container, .section-crew__container, .section-about__container {
+    position: relative;
     padding: 64px 0 32px 0;
     width: 100%;
     display: flex;
@@ -742,6 +740,19 @@ html {
     visibility: visible;
     pointer-events: all;
 }
+.section-about__container {
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 0;
+    line-height: 1.8;
+}
 @media screen and (max-width: 1400px){
     .header-nav__nav-links {
         margin-right: 150px;
@@ -828,7 +839,7 @@ html {
     .crew__member-large-text {
         font-size: 3.5rem;
     }
-    .section-upcoming__container, .section-mixes__container, .section-crew__container 
+    .section-upcoming__container, .section-mixes__container, .section-crew__container, .section-about__container
     {
         padding: 32px 0;
         padding-bottom: 0;
